@@ -1,0 +1,253 @@
+{
+    "ingredients":
+    [
+        {
+            "name": "dough",
+            "display": {"pl": "Ciasto"},
+            "section": {"pl": "Ciasto"},
+            "type": "entire", 
+            "mode": "autoadd",
+            "zIndex": 10,
+            "price": 12
+        },
+        {
+            "name": "salami",
+            "display": {"pl": "Salami"},
+            "section": {"pl": "Mięso"},
+            "img": "salami/{1-12}.png",
+            "zIndex":20,
+            "price": 2.5,
+            "positions":{
+                "small":[
+                    [226,424],
+                    [231,799],
+                    [489,943],
+                    [504,211],
+                    [384,588],
+                    [762,606],
+                    [595,742],
+                    [613,439],
+                    [774,265],
+                    [933,466],
+                    [934,759],
+                    [754,970]
+                ]          
+            }       
+        },
+        {
+            "name": "ham",
+            "display": {"pl": "Szynka"},
+            "section": {"pl": "Mięso"},
+            "img": "ham/{1-2}.png",
+            "zIndex":20,
+            "price": 2.5
+        },
+        {
+            "name": "chicken",
+            "display": {"pl": "Kurczak"},
+            "section": {"pl": "Mięso"},
+            "img": "chicken/{1-7}.png",
+            "zIndex":20,
+            "price": 2.5,
+            "positions":{
+                "small":[
+                    [253,355],
+                    [795,217],
+                    [976,385],
+                    [367,520],
+                    [193,610],
+                    [315,772],
+                    [423,219],
+                    [541,366],
+                    [793,429],
+                    [828,600],
+                    [574,741],
+                    [594,528],
+                    [787,847],
+                    [694,1005],
+                    [492,924]
+                ]          
+            }       
+        },
+
+        {
+            "name": "lettuce",
+            "display": {"pl": "Sałata"},
+            "section": {"pl": "Warzywa"},
+            "img": "lettuce/{1-10}.png",
+            "zIndex":30,
+            "count": 40,
+            "price": 2
+            
+        },                
+
+        {
+            "name": "pepper-red",
+            "display": {"pl": "Czerwona papryka"},
+            "section": {"pl": "Warzywa"},
+            "img": "pepper-red/{1-13}.png",
+            "zIndex":30,
+            "count": 50,
+            "price": 3
+        },                
+
+        {
+            "name": "pepper-yellow",
+            "display": {"pl": "Żółta papryka"},
+            "section": {"pl": "Warzywa"},
+            "img": "pepper-yellow/{1-13}.png",
+            "zIndex":30,
+            "count": 50,
+            "price": 3
+        },                
+
+        {
+            "name": "pepper-green",
+            "display": {"pl": "Zielona papryka"},
+            "section": {"pl": "Warzywa"},
+            "img": "pepper-green/{1-17}.png",
+            "zIndex":30,
+            "count": 50,
+            "price": 3
+            
+        },                
+
+        {
+            "name": "tomato",
+            "display": {"pl": "Pomidory"},
+            "section": {"pl": "Warzywa"},
+            "img": "tomato/{1-4}.png",
+            "zIndex":30,
+            "price": 3.3,
+            "positions":{
+                "small":[
+                    [436,292],
+                    [600,492],
+                    [400,592],
+                    [727,228],
+                    [858,409],
+                    [1017,520],
+                    [978,706],
+                    [691,690],
+                    [595,979],
+                    [867,897],
+                    [468,760],
+                    [346,925],
+                    [196,670],
+                    [249,397]                     
+                ]
+            }
+        },
+        {
+            "name": "pineapple",
+            "display": {"pl": "Ananas"},
+            "section": {"pl": "Owoce"},
+            "img": "pineapple/{1-9}.png",
+            "zIndex":30,
+            "count": 45,
+            "price": 3.3
+        },    
+        {
+            "name": "spinach",
+            "display": {"pl": "Szpinak"},
+            "section": {"pl": "Warzywa"},
+            "img": "spinach/{1-11}.png",
+            "zIndex":30,
+            "count": 50,
+            "price": 3
+        },    
+        {
+            "name": "cucumber",
+            "display": {"pl": "Ogórki"},
+            "section": {"pl": "Warzywa"},
+            "img": "cucumber/{1-8}.png",
+            "zIndex":30,
+            "count": 50,
+            "price": 2.3
+        },                
+        {
+            "name": "onion",
+            "display": {"pl": "Cebula"},
+            "section": {"pl": "Warzywa"},
+            "img": "onion/{1-6}.png",
+            "zIndex":31,
+            "count": 60,
+            "price": 2.2
+        },
+        {
+            "name": "feta",
+            "display": {"pl": "Feta"},
+            "section": {"pl": "Sery"},
+            "img": "feta/{1-13}.png",
+            "count": 50,
+            "zIndex":50,
+            "price": 4
+        },
+        {
+            "name": "prawn",
+            "display": {"pl": "Krewetki"},
+            "section": {"pl": "Dodatki"},
+            "img": "prawn/{1-9}.png",
+            "zIndex":30,
+            "price": 3.5,
+            "positions":{
+                "small":[
+                    [436,292],
+                    [600,492],
+                    [400,592],
+                    [727,228],
+                    [858,409],
+                    [1017,520],
+                    [978,706],
+                    [691,690],
+                    [595,979],
+                    [867,897],
+                    [468,760],
+                    [346,925],
+                    [196,670],
+                    [249,397]                     
+                ]
+            }
+        },        
+  
+        {
+            "name": "mushroom-common",
+            "display": {"pl": "Pieczarki"},
+            "section": {"pl": "Dodatki"},
+            "img": "mushroom-common/{1-13}.png",
+            "count": 40,
+            "zIndex":40,
+            "price": 2
+        },
+       
+        {
+            "name": "maize",
+            "display": {"pl": "Kukurydza"},
+            "section": {"pl": "Dodatki"},
+            "count": 60,
+            "zIndex":40,
+            "price": 2
+        },
+
+        {
+            "name": "olive",
+            "display": {"pl": "Oliwki"},
+            "section": {"pl": "Dodatki"},
+            "img": "olive/{1-13}.png",
+            "count": 40,
+            "zIndex":40,
+            "price": 3
+        },
+        {
+            "name": "pea",
+            "display": {"pl": "Groszek"},
+            "section": {"pl": "Dodatki"},
+            "img": "pea/{1-5}.png",
+            "count": 60,
+            "zIndex":40,
+            "price": 2
+        }
+
+       
+    ]
+ }

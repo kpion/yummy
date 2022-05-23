@@ -1,0 +1,408 @@
+/** 
+Style tylko dla wnętrza iframe, dla naszej głównej apki.
+*/
+
+:root {
+    /*
+    bordery dla zwizualizowania elementów, dać 0px na produkcji, 1px gdy chcemy to widzieć.
+    */
+    /* --dev-border-width: 1px; */
+    --dev-border-width: 0px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.clear-fix{
+    clear:both;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #2FACFF;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body {
+    margin: 0;
+    /* font-family: "sans-serif"; */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    user-select:none;
+    color: #aaa;
+    /*background-color: #2D201C;*/ /*od grafika, ale dym tu średnio wygląda (widać jego granice)*/
+    /* background-color: #000; <- czarny, tu dym wygląda najlepiej */
+    background:none transparent; 
+
+    /* Ma zapobiegać odświeżaniu na chrome na androidzie przy 'pull-down' */
+    overscroll-behavior: contain;
+}
+
+.app-container{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.loader{
+    width: 300px;
+    min-height: 300px;
+    padding: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;                
+    transform: translate(-50%, -50%);
+    /* background:url('./../images/logo-background.jpg');
+    background-size:contain; */
+    color:black;
+}
+
+.loader img{
+    width:100%;
+}
+
+.loader .loader-progress{
+    font-size:140%;
+}
+
+
+.composer-container {
+    width: 100%;
+    height: 100%;
+    /* padding:10px; */
+    /* border:1px solid pink; */
+    /* margin: 0 auto; */
+}
+
+.composer-container::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.scene-wrapper{
+    float: left;
+    width:70%;
+    /* width:calc(100% - 300px); */
+    height:99vh;   
+    overflow:hidden; 
+    border:var(--dev-border-width) solid red;
+}
+
+.menu-wrapper{
+    float:left;
+    width:30%;
+    /* width:300px; */
+    /* height:60vh; */
+    overflow-y:auto;    
+    border:var(--dev-border-width) solid red;
+    padding:0px 40px 10px 10px;
+    margin-top:10px;
+    opacity:0.65;
+ 
+
+}
+
+.actions-wrapper{
+    float:left;
+    /* width:300px; */
+    width:30%;
+    margin-top:10px;
+    padding:0px 40px 10px 10px;
+    border:var(--dev-border-width) solid blue;
+}
+
+@media (max-width: 800px) {
+    .scene-wrapper {
+        width: 100%;
+        height: 45vh;
+
+        /* 
+        @now
+        margin: 0 auto;
+        width: 50%; */
+      
+    }
+    .menu-wrapper{
+        width: 100%;
+        height:40vh;
+        padding-right:10px;
+        text-align: center;
+    }
+    .actions-wrapper{
+        width: 100%;
+        height:10vh;
+        padding-right:10px;
+    }
+
+    .menu .menu-section-label{
+        width: 70%;
+    }
+}
+
+.scene-scale {
+    width: 1200px;
+    height: 1200px;    
+    transform-origin: left top;   
+    position: relative;
+    text-align: center;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;    
+    /* transform-origin: left top;    */
+    position: relative;
+}
+
+.layer {
+    /* border: 3px dotted #aaf; */
+    width: 100%;
+    height: 100%;
+    /* height: 70%; */
+    position: absolute;
+}
+
+.layer .layer-entire img {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+Jeden kawałek np. pomidora albo kukurydzy. Być może też całe ciasto.
+*/
+.layer .particle{
+    position:absolute;
+    top:0;left:0;
+}
+
+/*
+Na cele developerskie.
+*/
+.circle{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    border-radius: 50%;
+    border:2px solid green;
+    
+}
+
+
+/*
+    Sprawa menu i accordion
+*/
+.menu .menu-section-label {
+    display:inline-block;
+    padding:4px;
+    border: none;
+
+    font-size: 115%;
+    font-weight: bold;
+    background-color: #ccc; 
+    color: #444;
+    border-radius: 3px;
+    cursor: pointer;
+    /* padding: 18px; */
+    width: 70%;
+    outline: none;
+    /* font-size: 15px; */
+    transition: 0.4s;
+    text-align:center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    opacity:0.8;
+}
+
+
+.menu .menu-section-label:hover {
+    /* background-color: #772323; */
+    /* color: #DEAC7F; */
+}
+
+.menu .menu-section-active .menu-section-label{
+    /* background-color: #772323; */
+    background-color: #7E936C;
+    /* color: #DEAC7F; */
+    color: white;
+    opacity:1;
+    font-size:150%;
+}
+
+.menu .menu-section-content {
+    /** To zmieniamy gdy user rozwija accordion */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*
+ Pozostałe spr. zw. z menu
+*/
+.menu ul{
+    /*trick zw. z faktem, że się scroll może pojawić. Trochę głupie.*/
+    /* margin-right:20px; */
+    /* width:280px; */
+    width:100%;
+    border:var(--dev-border-width) solid blue;
+    margin-bottom: 10px;
+}
+
+.menu li{
+    margin:0px 10px 0px 0px;
+    margin-bottom:7px;
+    width:100%;
+    font-size: 105%;
+
+    /* border:1px solid #ccc; */
+}
+
+.menu li>span{
+    display: block;
+    float:left;
+    /* background-color: #772323; */
+    background-color: #7E936C;
+    color: white;
+    margin-left:7px;
+    padding:4px;
+    border-radius: 3px;
+}
+
+.menu li>span:first-of-type{
+    margin-left:0px;
+}
+
+.menu li img{
+    width:32px;
+    vertical-align:middle;
+    margin-right:10px;
+    opacity:0.5;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+.menu li:hover img{
+    opacity:1;
+}
+
+.menu li .menu-ingredient-change{
+    /* padding:2px; */
+    width:32px;
+    height:32px;
+    text-align: center;
+    cursor:pointer; 
+    font-size: 120%;
+    font-weight: bold;
+    /* line-height: 100%; */
+    /* border: 1px solid #ccc; */
+    /* opacity: 0.7; */
+    overflow:hidden;
+    padding:2px;
+}
+
+.menu li .menu-ingredient-change:hover{
+    background-color:#000;
+    opacity:1;
+}
+
+.menu li .menu-ingredient-name{
+    /*32 to szerokości .menu-ingredient-change (dwa takie przyciski, a reszta to marginesy, więc dajemy 100% minus te przestrzenie*/
+    width:calc(100% - 32px * 2 - 7px * 2 - 10px * 2);
+    /* height:32px; */
+    text-align: center;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.menu li .menu-ingredient-count{
+    font-weight: bold;
+}
+
+.actions button{
+    width:100%;
+    background-color: #eba614;
+    color:black;
+    /* color: #DEAC7F; */
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    font-size:110%;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.developer {
+    float:left;
+    width:100%;
+    overflow:hidden;
+    padding:10px;
+    border:var(--dev-border-width) solid green;
+}
+
+.developer h2{
+    font-size: 1.1em;
+    font-weight:bold;
+}
+
+/* Cena za całe danie (całe to kółko) */
+.dish-price{
+    position:absolute;
+
+    right:1%;
+    top:1%;
+
+    width:380px;
+    height:380px;
+    
+    border-radius: 50%;
+    z-index:200;
+    opacity:0;
+    color:white;
+}              
+
+
+.dish-price-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;                
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.dish-price-price{
+    font-size: 550%;
+    line-height: 100%;
+}
+
+.dish-price-unit{
+    font-size:300%;
+}

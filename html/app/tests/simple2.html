@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Simple 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='./../assets/js/lightdom.js'></script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        html{
+            width:100%;
+            height:100%;
+        }
+        body {
+            margin: 0;
+            width: 100%;
+            height:100%;
+            font-family: "Roboto", "sans-serif";
+            line-height: 1.5;
+            color: #555;
+            background: linear-gradient(70deg, black, orange);
+        }
+
+        .scene {
+            position:relative;
+            float:left;
+            width:60%;
+            height:100vh;
+            overflow:hidden;
+        }
+
+        .video-wrap{
+            position:absolute;
+            width:100vh;height:100vh;  
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*flex-direction: column; - jeśli chcemy elementy mieć w kolumnie, wycentrowane */     
+        }
+
+        .video{
+            position:absolute;
+            width:100%;
+            height:100%;
+            z-index:2;
+            /* border:1px solid #333; */
+            object-fit: cover;
+        }
+
+        .pizza{
+            position:absolute;
+            /* width:100%;
+            height:100%;       */
+            /* border:3px solid #fdd;       */
+            width:100vh;height:100vh; 
+     
+        }
+
+        .pizza img{
+            width:100%;
+            height:100%;
+        }
+
+        /* ----------- */
+        .developer{
+            float:left;
+            width:35%;
+            margin-left:10px;
+        }
+        .change{
+            margin-top:7px;
+        }
+        .change>span{
+            display:inline-block;
+            width:250px;
+            overflow:hidden;
+        }
+
+        .change button{
+            min-width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class = 'scene'>
+
+        <div class = 'video-wrap'>
+            <video loop autoplay class = 'video'></video>
+        </div>
+
+        <div class = 'pizza'>
+            <img src = './../ingredients/dough/1.png'>
+        </div>
+
+    </div>
+    <div class = 'developer'>
+
+        <h2>General</h2>
+        <div class = 'change'>
+            <label>Show pizza <input type = 'checkbox' class = 'show-pizza' checked autocomplete='off'></label>
+        </div>
+
+        <div class = 'change'>
+            <span>Background: <span class = 'current-background'>black</span></span><button class = 'btn-background'>Change background</button>
+        </div>
+
+        <h2>Video</h2>
+        <div class = 'change'>
+            <span>Source: </span>
+            <select class = 'current-video' autocomplete='off'>
+                <option value = 'none' selected>None</option>
+                <option value = 'smoke-4.webm'>smoke-4.webm</option>
+                <option value = 'smoke-5.webm'>smoke-5.webm</option>
+                <option value = 'smoke-6-loop-rgba-1200.webm'>smoke-6-loop-rgba-1200.webm</option>
+                <option value = 'smoke-7-loop-rgba.webm'>smoke-7-loop-rgba.webm</option>
+                <option value = 'smoke-8-loop-rgba.webm'>smoke-8-loop-rgba.webm</option>
+                <option value = 'smoke-11-loop-rgba.webm'>smoke-11-loop-rgba.webm</option>
+            </select>
+        </div>
+
+        <div class = 'change'>
+            <span>Opacity: <span class = 'current-opacity'>1</span></span><button class = 'btn-opacity-dec'>-</button> <button class = 'btn-opacity-inc'>+</button>
+        </div>
+
+        <div class = 'change'>
+            <span>Size: <span class = 'current-size'>100%</span>, centered</span><button class = 'btn-size-dec'>-</button> <button class = 'btn-size-inc'>+</button>
+        </div>
+
+        <div class = 'change'>
+            <span>Z-index: <span class = 'current-z-index'>over</span></span><button class = 'btn-video-z-index'>Change video z-index</button>
+        </div>
+
+        <div class = 'change'>
+            <span>Speed: <span class = 'current-speed'>1</span></span><button class = 'btn-speed-dec'>-</button> <button class = 'btn-speed-inc'>+</button>
+        </div>
+
+    </div>
+    <br>
+    <script>
+        l().ready(()=>{
+            let videoZIndex = 'over';
+            let background = 'black';
+            let opacity = 1;
+            let size = 100;
+            let speed = 1;
+
+            // Video src
+            l('.current-video').on('change',()=>{
+                let newSrc = l('.current-video')[0].value;
+                l('.video').attr('src', `./../assets/videos/${newSrc}`);
+                l('.video')[0].playbackRate = speed;
+            })
+
+            // Czy pokazywać pizzę
+            l('.show-pizza').on('change',()=>{
+                if(l('.show-pizza')[0].checked){
+                    l('.pizza').css('display','block');
+                }else{
+                    l('.pizza').css('display','none');
+                }
+            })
+
+            // Opacity --
+            l('.btn-opacity-dec').on('click',()=>{
+                opacity -= 0.05;
+                l('.video').css('opacity',opacity);
+                l('.current-opacity').text(opacity.toFixed(2));
+            })
+
+            // Opacity ++
+            l('.btn-opacity-inc').on('click',()=>{
+                opacity += 0.05;
+                l('.video').css('opacity',opacity);;
+                l('.current-opacity').text(opacity.toFixed(2));
+            })
+
+            // Size --
+            l('.btn-size-dec').on('click',()=>{
+                size -= 1;
+                l('.video').css({width:`${size}%`, height:`${size}%`});
+                l('.current-size').text(size + '%');
+            })
+
+            // Size ++
+            l('.btn-size-inc').on('click',()=>{
+                size += 1;
+                l('.video').css({width:`${size}%`, height:`${size}%`});
+                l('.current-size').text(size + '%');
+            })
+
+            // Speed --
+            l('.btn-speed-dec').on('click',()=>{
+                speed -= 0.05;
+                l('.current-speed').text(speed.toFixed(2));
+                l('.video')[0].playbackRate = speed;
+                l('.video')[0].play();
+            })
+
+            // Speed ++
+            l('.btn-speed-inc').on('click',()=>{
+                speed += 0.05;
+                l('.current-speed').text(speed.toFixed(2));
+                l('.video')[0].playbackRate = speed;
+                l('.video')[0].play();
+            })
+
+
+            // z-index
+            l('.btn-video-z-index').on('click',()=>{
+                if(videoZIndex == 'over'){
+                    videoZIndex = 'below';
+                    l('.video').css('z-index',-2);
+                }else{
+                    videoZIndex = 'over';
+                    l('.video').css('z-index',2);
+                }
+                l('.current-z-index').text(videoZIndex);
+            })
+
+            // Background
+            l('.btn-background').on('click',()=>{
+                if(background == 'white'){
+                    background = 'black';
+                }else{
+                    background = 'white';
+                }
+                l('.current-background').text(background);
+                l('body').css('background-color',background);
+            })            
+        });
+    </script>
+</body>
+
+</html>

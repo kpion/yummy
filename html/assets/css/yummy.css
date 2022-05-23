@@ -1,0 +1,136 @@
+@charset "UTF-8";
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    /* color: #772323; */
+    color: #d11212;
+}
+
+html, body {
+    color: #fff;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(70deg, black, orange);
+    /* Ma zapobiegać odświeżaniu na chrome na androidzie przy 'pull-down' */
+    overscroll-behavior: contain;
+}
+
+.main {
+    display: flex;
+    text-align: center;
+    min-height: 100%;
+    position: relative;
+}
+
+.pizza {
+    width: 65%;
+    flex-grow: 0;
+}
+
+.right {
+    flex-grow: 1;
+    opacity: 0.7;
+    color: black;
+    padding: 20px;
+    width: 35%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.right p {
+    border-radius: 25px;
+    background: #ffc600;
+    padding: 20px;
+    animation: backInRight;
+    animation-duration: 1s;
+}
+
+.right .call-to-action{
+    cursor:pointer;
+    background-color: #f54f1d;
+    color: #fff;
+    font-weight: bold;
+}
+
+.call-to-action:hover{
+    background: #f7693d;
+}
+
+.right ul li {
+    color: #d9d9d9;
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+
+.right ul li:active {
+    background-color: #ffc600;
+}
+
+.right ul li.selected {
+    color: white;
+}
+
+#bMore {
+    display: none;
+}
+
+.animate1 {
+    animation: fadeOut;
+    animation-duration: 2s;
+}
+
+.mobileFingerprint {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.mobileFingerprint i {
+    cursor: pointer;
+    color: orange;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .pizza {
+        width: 100%;
+    }
+    .right {
+        display: none;
+        width: 0px;
+    }
+    #bMore {
+        display: block;
+    }
+}
+
+/* Dla telefonów, niezależnie od rozdzielczości */
+
+@media only screen and (hover: none) {
+    /* Nawet na nowym telefonie dym to tragedia, prawie nic nie działa, za słaby cpu. */
+    /* .smoke {
+        display: none;
+    } */
+}

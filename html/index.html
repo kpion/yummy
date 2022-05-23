@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>AKIMAKI Yummy - Graficzny Kompozytor PIZZY</title>
+    <meta name="description" content="Graficzny kompozytor PIZZY">
+    <meta name="keywords" content="pizza,konfigurator,kompozytor,generator">
+    <meta name="author" content="akimaki">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700%7CKadwa:400,700"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/yummy.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body id="body">
+    <video class='smoke' playsinline autoplay muted loop>
+        <source type="video/webm">
+    </video>
+    <div class="main">
+        <div class="pizza">
+            <iframe class='yummy-container' src='./app/embed.php?style=akimaki' width='100%' height="100%"
+                frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        </div>
+        <div class="right" id="right">
+            <ul>
+                <li data-text="text-about" class="fa fa-home fa-3x selected"></li>
+                <li data-text="text-more" class="fa fa-folder fa-3x"></li>
+                <li data-text="text-contact" class="fa fa-envelope fa-3x"></li>
+            </ul>
+            <div id="text-about" class="text">
+                <p>
+                    <strong>PIZZA</strong>, którą widzisz po lewej stronie jest ostatecznym
+                    rezultatem naszego <strong>kompozytora</strong>, proszę nie mylić z przypadkowym zdjęciem
+                    znalezionym w Internecie.
+                    Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo na <a href="https://akimaki.net">tej stronie.</a>.
+                </p>
+                <p>
+                    W każdej chwili możesz mieć podobny na stronie Internetowej <strong>własnej restauracji</strong>
+                    niezależnie czy jest ona
+                    autorskim projektem czy templatem WordPress. Moduł konfiguratora może być osadzony w każdym miejscu
+                    w sieci.
+                    Będzie on <strong>funkcjonalnym</strong> i <strong>atrakcyjnym</strong> elementem Twojego interesu.
+                    Zadbamy o to.
+                </p>
+                <p>
+                    Wizualizacja przyszłej PIZZY sama w sobie <strong>przyciąga klientów</strong>. Zabawa składnikami
+                    jest przyjemna i daje możliwość
+                    stworzenia własnego unikatowego zamówienia, którym można się dalej podzielić na <strong>"social
+                        media"</strong> jednocześnie promując
+                    markę restauracji.
+                </p>
+                <p>
+                    System logowania sie przez <strong>Google</strong> i <strong>Facebook</strong> ułatwi proces
+                    logowania i rejestracji klientów, którzy będą mieli na to ochotę.
+                    Dla zainteresowanych tą opcją czekają <strong>promocje</strong> i <strong>rabaty</strong> jakie
+                    sobie wymyślisz.
+                </p>
+                <p>
+                    <strong>Panel administracyjny</strong>, który Tobie udostępnimy umożliwi Tobie konfiguracje
+                    poszczególnych składników, cen produktów i promocji.
+                </p>
+                <p>
+                    Nie jest problemem jeśli w naszej ofercie zabraknie <strong>składników</strong>, które masz w swoim
+                    <strong>menu</strong>.
+                    Rozszerzymy ofertę i dopasujemy się do Ciebie. W razie konieczności przyjedziemy do Ciebie i
+                    sfotografujemy
+                    unikalne kompozycje, które serwujesz.
+                </p>
+                <p class = 'call-to-action'>
+                    <span>Skontaktuj się z nami</span>
+                </p>
+            </div>
+            <div id="text-more" class="text" style="display: none;">
+                <p>
+                    <strong>Prosta implementacja</strong><br>
+                    Nie musisz się znać na programowaniu. Jedną liniką kodu uruchomiasz generator pizzy na własnej
+                    stronie. Ty skup się na własnym biznesie.
+                </p>
+                <p>
+                    <strong>Personalizacja składników</strong><br>
+                    Dodaj własne produty i zdjęcia ciast. Pizza będzie wyglądać jak z Twojego piekarnika.
+                </p>
+                <p>
+                    <strong>Ceny produktów</strong><br>
+                    Ustaw własne ceny pomidora, salami, kurczaka czy sera.
+                </p>
+                <p>
+                    <strong>Powiadomienia</strong><br>
+                    Każde nadchodzące zlecenie będzie dostarczana na email jak również dźwiękowo.
+                </p>
+            </div>
+            <div id="text-contact" class="text" style="display: none;">
+                <p>
+                    <strong>Adres:</strong><br>
+                    ul. Grochowska 4E/18<br>
+                    78-100 Kołobrzeg<br>
+                    POLAND
+                </p>
+                <p>
+                    <strong>Email:</strong><br>
+                    akimakinet@gmail.com
+                </p>
+                <p>
+                    <strong>Telefon:</strong><br>
+                    504 545 611
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mobileFingerprint">
+        <i id="bMore" class="fa fa-fingerprint fa-2x"></i>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/yummy.js"></script>
+
+</html>

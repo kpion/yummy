@@ -1,0 +1,26 @@
+/* Dark layout */
+
+body{
+    /* background-color:black; */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.menu .menu-section-label {
+    background-color: #fff; 
+    color: #444;
+}
+
+.menu .menu-section-label:hover {
+    background-color: #772323;
+    color: #DEAC7F;
+}
+
+.menu .menu-section-active .menu-section-label{
+    background-color: #772323;
+    color: #DEAC7F;
+}
+
+.menu li>span{
+    background-color: #772323;
+    color: #DEAC7F;
+}
