@@ -16,4 +16,4 @@ Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo tutaj:
 
 ## EN
 
-It's a **pizza generator/creator online**, right now only in Polish, but on demand we will.
+It's a **pizza generator/creator online**, right now only in Polish, but on demand we will translate to any language you wish.
