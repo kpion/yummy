@@ -10,8 +10,9 @@ W każdej chwili możesz mieć podobny na stronie Internetowej własnej restaura
 
 Wizualizacja przyszłej PIZZY sama w sobie przyciąga klientów. Zabawa składnikami jest przyjemna i daje możliwość stworzenia własnego unikatowego zamówienia, którym można się dalej podzielić na "social media" jednocześnie promując markę restauracji. 
 
-Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo na tej 
-** [http://sysrq.net.pl/yummy/html/](http://sysrq.net.pl/yummy/html/) **
+Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo tutaj:
+
+[http://sysrq.net.pl/yummy/html/](http://sysrq.net.pl/yummy/html/)
 
 ## EN
 
