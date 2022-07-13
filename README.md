@@ -2,7 +2,7 @@
 
 ## PL
 
-<img src="https://yummy.sysrq.net.pl/html/assets/video/presentation4.gif" width="1200">
+<img src="https://yummy.sysrq.net.pl/assets/video/presentation4.gif" width="1200">
 
 **PIZZA**, którą widzisz na tej animacji jest ostatecznym rezultatem naszego kompozytora, proszę nie mylić z przypadkowym zdjęciem znalezionym w Internecie :) 
 
@@ -12,7 +12,7 @@ Wizualizacja przyszłej PIZZY sama w sobie przyciąga klientów. Zabawa składni
 
 Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo tutaj:
 
-[https://yummy.sysrq.net.pl/html/](https://yummy.sysrq.net.pl/html/)
+[https://yummy.sysrq.net.pl](https://yummy.sysrq.net.pl)
 
 ## EN
 
