@@ -2,7 +2,7 @@
 
 ## PL
 
-<img src="https://yummy.sysrq.net.pl/assets/video/presentation4.gif" width="800">
+<img src="https://yummy.sysrq.net.pl/assets/video/presentation4.gif" width="400px">
 
 **PIZZA**, którą widzisz na tej animacji jest ostatecznym rezultatem naszego kompozytora, proszę nie mylić z przypadkowym zdjęciem znalezionym w Internecie :) 
 
