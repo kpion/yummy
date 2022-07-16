@@ -2,9 +2,9 @@
 
 ## PL
 
-<img src="https://yummy.sysrq.net.pl/assets/video/presentation4.gif" width="400px">
+<img src="http://sysrq.net.pl/yummy/html/assets/video/presentation4.gif" width="1200">
 
-**PIZZA**, którą widzisz na tej animacji jest ostatecznym rezultatem naszego kompozytora, proszę nie mylić z przypadkowym zdjęciem znalezionym w Internecie :) 
+**PIZZA**, którą widzisz na tej animacji jest ostatecznym rezultatem naszego kompozytora, proszę nie mylić z przypadkowym zdjęciem znalezionym w Internecie. 
 
 W każdej chwili możesz mieć podobny na stronie internetowej własnej restauracji niezależnie czy jest ona autorskim projektem czy templatem WordPress. Moduł konfiguratora może być osadzony w każdym miejscu w sieci. Będzie on funkcjonalnym i atrakcyjnym elementem.
 
@@ -12,7 +12,7 @@ Wizualizacja przyszłej PIZZY sama w sobie przyciąga klientów. Zabawa składni
 
 Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo tutaj:
 
-[https://yummy.sysrq.net.pl](https://yummy.sysrq.net.pl)
+[http://sysrq.net.pl/yummy/html/](http://sysrq.net.pl/yummy/html/)
 
 ## EN
 
