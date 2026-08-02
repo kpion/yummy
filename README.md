@@ -12,7 +12,11 @@ Wizualizacja przyszłej PIZZY sama w sobie przyciąga klientów. Zabawa składni
 
 Właśnie w ten sposób działa nasz generator pizzy dostępny jako demo tutaj:
 
-[http://sysrq.net.pl/yummy/html/](http://sysrq.net.pl/yummy/html/)
+[https://yummy.sysrq.net.pl/](https://yummy.sysrq.net.pl/)
+
+
+
+
 
 ## EN
 
